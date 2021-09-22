@@ -1,7 +1,7 @@
 node {
-    //  instructions
-    // parameter
-    //Build trigger
+    
+    properties([parameters([string(defaultValue: '3.95.10.107', description: 'Please give an IP to host a website', name: 'DEVIP', trim: true)])])
+
     stage("git pull"){ 
         git "git@github.com:danfmihai/web-jenkins.git"
     }    
