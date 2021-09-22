@@ -3,8 +3,7 @@ node {
     //Parameters
     //Build trigger
     //Poll SCM
-    properties([parameters([string(defaultValue: '3.95.10.107', description: 'Please give an IP to host a website', name: 'DEVIP', trim: true)])])
-    properties([pipelineTriggers([pollSCM('* * * * *')])])
+    properties([parameters([string(defaultValue: '127.0.0.1', description: 'Please enter IP to host website', name: 'DEVIP', trim: true)]), pipelineTriggers([pollSCM('* * * * *')])])
 
     stage("git pull"){ 
         git "git@github.com:danfmihai/web-jenkins.git"
