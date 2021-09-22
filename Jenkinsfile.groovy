@@ -3,7 +3,7 @@ node {
     // parameter
     //Build trigger
     stage("git pull"){ 
-        git "git@github.com:danfmihai/jenkins-pipeline.git"
+        git "git@github.com:danfmihai/web-jenkins.git"
     }    
 
     stage("Install apache"){
