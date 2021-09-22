@@ -15,7 +15,7 @@ node {
     }
 
     stage("Copy files"){
-        sh "rsync -aP --delete index.html ec2-user@${DEVIP}:/tmp/"
+        sh "rsync -aP --delete index.html ec2-user@${DEVIP}:/tmp"
     }    
 
     stage("Move files"){
